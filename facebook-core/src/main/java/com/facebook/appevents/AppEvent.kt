@@ -234,7 +234,7 @@ class AppEvent : Serializable {
     private fun md5Checksum(toHash: String): String {
       val hash: String
       try {
-        val digest = MessageDigest.getInstance("MD5")
+        val digest = MessageDigest.getInstance("SHA-256")
         var bytes = toHash.toByteArray(charset("UTF-8"))
         digest.update(bytes, 0, bytes.size)
         bytes = digest.digest()

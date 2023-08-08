@@ -798,7 +798,7 @@ object FacebookSdk {
     }
     val md =
         try {
-          MessageDigest.getInstance("SHA-1")
+          MessageDigest.getInstance("SHA-256")
         } catch (e: NoSuchAlgorithmException) {
           return null
         }
